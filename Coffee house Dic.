@@ -1,0 +1,26 @@
+print('This is a basic dictionary')
+
+#Create Coffee House Dicitonary
+Coffehouse = {
+    'lroast': {'Name' : 'Light Roast', 'Unit price' : 2.99, 'Unit Total:' : 10},
+    'mroast': {'Name' : 'Medium Roast', 'Unit price' : 3.50, 'Unit Total:' : 10},
+    'droast': {'Name' : 'Dark Roast', 'Unit price' : 4.99, 'Unit Total:' : 10},
+    'mug': {'Name' : 'Reusubale Mug', 'Unit price' : 8.99, 'Unit Total:' : 10}
+
+}
+
+#f-string for heading
+print(f"{'ID' :<6} {' Name' :<20} {'Price' :>8} {' Unit Total'}")
+print('_' * 60)
+
+for CH_item in Coffehouse.keys():
+    #get the Info of product
+    ID = CH_item
+    name = Coffehouse[CH_item]['Name']
+    unit_price = '$' + f"{Coffehouse[CH_item]['Unit price']:,.2f}"
+    unit_total = Coffehouse[CH_item]['Unit Total:']
+    
+    print(f"{ID :<6} {name :<20} {unit_price :>8} {unit_total :>8}")
+
+
+    
